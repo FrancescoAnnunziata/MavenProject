@@ -6,8 +6,9 @@ import static spark.Spark.*;
 
 public class Main {
     public static void main(String[] args) {
-        get("/hello", (req, res) -> {
+        get("/italy", (req, res) -> {
             Logger.info("Qualcuno sta spiando il tuo server!");
-            return "Hello World";});
+            Logger.info(req.host(), req.protocol());
+            return "Pizza, pasta, mandolino!";});
     }
 }
